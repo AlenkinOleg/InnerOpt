@@ -67,9 +67,9 @@ if __name__=='__main__':
     output_file = "/shared/metrics.json"
     
     try:
-        opts, args = getopt.getopt(argv, "", ["pitch=", "yoffset_layer=", "yoffset_plane=", "zshift_layer=", "zshift_plane=", "shift_view=", "alpha=", "output=", "nEvents="])
+        opts, args = getopt.getopt(argv, "", ["pitch=", "yoffset_layer=", "yoffset_plane=", "zshift_layer=", "zshift_plane=", "zshift_view=", "alpha=", "output=", "nEvents="])
     except getopt.GetoptError:
-        print "Wrong parameters. Available params: pitch, yoffset_layer, yoffset_plane, zshift_layer, zshift_plane, zshift_view, alpha, output.\n"
+        print "Wrong parameters. Available params: pitch, yoffset_layer, yoffset_plane, zshift_layer, zshift_plane, zshift_view, alpha, output, nEvents.\n"
         sys.exit(2)
     
     for opt, arg in opts:
