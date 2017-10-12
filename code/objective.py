@@ -83,7 +83,7 @@ if __name__=='__main__':
             DeltazLayer = arg
         elif opt == "--zshift_plane":
             DeltazPlane = arg
-        elif opt == "--shift_view":
+        elif opt == "--zshift_view":
             DeltazView = arg
         elif opt == "--alpha":
             ViewAngle = arg
