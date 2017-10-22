@@ -1,0 +1,26 @@
+ Generating stack trace...
+ 0x00007f565939105d in FairLogger::Fatal(char const*, char const*, char const*, char const*, ...) at /opt/FairRoot/fairtools/FairLogger.cxx:76 from /opt/FairRootInst/lib/libFairTools.so.15
+ 0x00007f56553675bb in HNLPythia8Generator::Init() + 0xa8b from /opt/FairShipRun/lib/libShipGen.so.0.0.0
+ 0x00007f5659b061e3 in FairPrimaryGenerator::Init() at /opt/FairRoot/base/sim/FairPrimaryGenerator.cxx:90 from /opt/FairRootInst/lib/libBase.so.15.11.0
+ 0x00007f564569df0a in TG4PhysicsManager::DefineParticles() at /opt/FairSoft/transport/geant4_vmc/source/physics/src/TG4PhysicsManager.cxx:682 from /opt/FairSoftInst/lib/libgeant4vmc.so
+ 0x00007f56456d461c in TG4RunManager::LateInitialize() at /opt/FairSoft/transport/geant4_vmc/source/run/src/TG4RunManager.cxx:426 from /opt/FairSoftInst/lib/libgeant4vmc.so
+ 0x00007f5659afc2c1 in FairMCApplication::InitMC(char const*, char const*) at /opt/FairRoot/base/sim/FairMCApplication.cxx:406 from /opt/FairRootInst/lib/libBase.so.15.11.0
+ 0x00007f5659aedc85 in FairRunSim::SetMCConfig() at /opt/FairRoot/base/steer/FairRunSim.cxx:299 from /opt/FairRootInst/lib/libBase.so.15.11.0
+ 0x00007f5659aefda0 in FairRunSim::Init() at /opt/FairRoot/base/steer/FairRunSim.cxx:237 from /opt/FairRootInst/lib/libBase.so.15.11.0
+ 0x00007f565374b02a in <unknown function>
+ 0x00007f56874f2b21 in FastCall(long, void*, void*, void*) at /opt/FairSoft/tools/root/bindings/pyroot/src/Cppyy.cxx:408 from /opt/FairSoftInst/lib/root/libPyROOT.so
+ 0x00007f56874f763f in PyROOT::TVoidExecutor::Execute(long, void*, PyROOT::TCallContext*) at /opt/FairSoft/tools/root/bindings/pyroot/src/Executors.cxx:46 from /opt/FairSoftInst/lib/root/libPyROOT.so
+ 0x00007f568751a069 in PyROOT::TMethodHolder::CallSafe(void*, long, PyROOT::TCallContext*) at /opt/FairSoft/tools/root/bindings/pyroot/src/TMethodHolder.cxx:126 from /opt/FairSoftInst/lib/root/libPyROOT.so
+ 0x00007f5687518ac9 in PyROOT::TMethodHolder::Execute(void*, long, PyROOT::TCallContext*) at /opt/FairSoft/tools/root/bindings/pyroot/src/TMethodHolder.cxx:531 from /opt/FairSoftInst/lib/root/libPyROOT.so
+ 0x00007f5687517d31 in PyROOT::TMethodHolder::Call(PyROOT::ObjectProxy*&, _object*, _object*, PyROOT::TCallContext*) at /opt/FairSoft/tools/root/bindings/pyroot/src/ObjectProxy.h:93 from /opt/FairSoftInst/lib/root/libPyROOT.so
+ 0x00007f56874fd0d6 in <unknown> from /opt/FairSoftInst/lib/root/libPyROOT.so
+ 0x00007f568868f8e3 in PyObject_Call + 0x43 from /lib64/libpython2.7.so.1.0
+ 0x00007f5688724036 in PyEval_EvalFrameEx + 0x2336 from /lib64/libpython2.7.so.1.0
+ 0x00007f568872ae3d in PyEval_EvalCodeEx + 0x7ed from /lib64/libpython2.7.so.1.0
+ 0x00007f568872af42 in PyEval_EvalCode + 0x32 from /lib64/libpython2.7.so.1.0
+ 0x00007f568874437f in <unknown> from /lib64/libpython2.7.so.1.0
+ 0x00007f568874553e in PyRun_FileExFlags + 0x7e from /lib64/libpython2.7.so.1.0
+ 0x00007f56887467c9 in PyRun_SimpleFileExFlags + 0xe9 from /lib64/libpython2.7.so.1.0
+ 0x00007f568875791f in Py_Main + 0xc9f from /lib64/libpython2.7.so.1.0
+ 0x00007f568797fb35 in __libc_start_main + 0xf5 from /lib64/libc.so.6
+ 0x000000000040071e in <unknown> from python
