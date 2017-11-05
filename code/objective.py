@@ -64,7 +64,7 @@ if __name__=='__main__':
     DeltazView = 10.
     ViewAngle = 5
     nEvents = 500
-    output_file = "/shared/metrics.json"
+    output_file = "/output/output.txt"
     
     try:
         opts, args = getopt.getopt(argv, "", ["pitch=", "yoffset_layer=", "yoffset_plane=", "zshift_layer=", "zshift_plane=", "zshift_view=", "alpha=", "output=", "nEvents="])
@@ -92,9 +92,6 @@ if __name__=='__main__':
         elif opt == "--nEvents":
             nEvents = arg
     
-    metrics = {}
-    metrics["Daniel"] = objective(StrawPitch, OffsetLayer12, OffsetPlane12, DeltazLayer, DeltazPlane, DeltazView, ViewAngle,\
-                                  nEvents)
-    
-    with open(output_file, 'w') as outfile:
-        json.dump(metrics, outfile)
+    with open(output_file, 'w') as tf:
+	tf.write(objective(StrawPitch, OffsetLayer12, OffsetPlane12, DeltazLayer, DeltazPlane, DeltazView, ViewAngle,\
+                           nEvents))
