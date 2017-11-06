@@ -93,5 +93,4 @@ if __name__=='__main__':
             nEvents = arg
     
     with open(output_file, 'w') as tf:
-	tf.write(objective(StrawPitch, OffsetLayer12, OffsetPlane12, DeltazLayer, DeltazPlane, DeltazView, ViewAngle,\
-                           nEvents))
+	tf.write(str(objective(StrawPitch, OffsetLayer12, OffsetPlane12, DeltazLayer, DeltazPlane, DeltazView, ViewAngle, nEvents)))
