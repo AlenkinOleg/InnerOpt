@@ -136,5 +136,6 @@ def dmetric(input_file, geo_file, dy, reconstructiblerequired, threeprong):
     #return daniel's metric
     df_1_view = all_hits[(all_hits.StatNb==1)&(all_hits.ViewNb==0)]
     counts = df_1_view.groupby(['event_id', 'track_id'])['StatNb'].count()
+    all_tracks = len(all_hits.groupby(['event_id', 'track_id'])['StatNb'].count())
     
-    return 1. * np.sum(counts>1) / len(counts)
+    return 1. * np.sum(counts>1) / all_tracks
