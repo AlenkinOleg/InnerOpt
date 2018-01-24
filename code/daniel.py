@@ -134,6 +134,7 @@ def dmetric(input_file, geo_file, dy, reconstructiblerequired, threeprong):
                           all_hits['PlaneNb'] * 100000 - all_hits['LayerNb'] * 10000 - 2000
     
     #return daniel's metric
+    all_hits = all_hits[all_hits.track_id.isin([3, 4])] # drop noise and some additional tracks
     df_1_view = all_hits[(all_hits.StatNb==1)&(all_hits.ViewNb==0)]
     counts = df_1_view.groupby(['event_id', 'track_id'])['StatNb'].count()
     all_tracks = len(all_hits.groupby(['event_id', 'track_id'])['StatNb'].count())
