@@ -38,7 +38,7 @@ def objective(StrawPitch = 1.7, OffsetLayer12 = 1.76/2, OffsetPlane12 = 1.76/4, 
     ShipOpt = str(os.getenv('SHIPOPT'))
     os.chdir(ShipOpt+'/temp/')
     os.system('source $SHIPSOFT/FairShipRun/config.sh')
-    os.system('python $FAIRSHIP/macro/run_simScript.py --nEvents '+str(nEvents))
+    os.system('python $FAIRSHIP/macro/run_simScript.py -f $FAIRSHIP/files/Cascade-parp16-MSTP82-1-MSEL4-76Mpot_1_5000.root --nEvents '+str(nEvents))
 
     #Metric calculation
     input_file = ShipOpt+'/temp/ship.conical.Pythia8-TGeant4.root'
@@ -48,7 +48,6 @@ def objective(StrawPitch = 1.7, OffsetLayer12 = 1.76/2, OffsetPlane12 = 1.76/4, 
     threeprong = 0
 
     return dmetric(input_file, geo_file, dy, reconstructiblerequired, threeprong)
-
 
 
 if __name__=='__main__':
